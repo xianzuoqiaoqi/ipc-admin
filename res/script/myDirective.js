@@ -1,0 +1,1 @@
+define(["require","app","myService"],function(require,app){app.directive("appTop",function(){return{restrict:"AE",replace:!0,scope:{},templateUrl:"res/tpl/header.html",controller:function($scope,myService){myService.getJson("res/json/topNavitems.json").success(function(data){$scope.topNavItem=data.navItem})}}})});

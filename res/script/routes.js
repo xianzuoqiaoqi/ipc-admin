@@ -1,0 +1,1 @@
+define(["require","app"],function(require,app){require("load")});
