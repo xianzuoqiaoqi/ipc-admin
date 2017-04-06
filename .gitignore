@@ -1,0 +1,8 @@
+# 忽略node_modules文件夹
+node_modules/
+# 忽略.idea文件夹
+.idea/
+# 忽略component文件夹
+component/
+# 忽略backdev 文 件 夹
+backdev/

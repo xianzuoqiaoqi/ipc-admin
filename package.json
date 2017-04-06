@@ -1,0 +1,42 @@
+{
+  "name": "z-admin",
+  "version": "1.0.0",
+  "description": "������后台管理模板，样式仿的loinver的管理系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zzq",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.18.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-optipng": "^5.2.1",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "angular-echarts": "^0.3.6"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "eqeqeq": "off",
+      "curly": "error",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "plugin1/rule1": "error"
+    }
+  }
+}
