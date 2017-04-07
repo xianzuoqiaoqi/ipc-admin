@@ -1,0 +1,16 @@
+<div id="top" class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-10" uib-dropdown>
+        <span class="user-operation" uib-dropdown-toggle style="border:none;">
+            <i class="icon ion-person"></i> {{ username }}  <span class="caret"></span>
+        </span>
+            <ul class="dropdown-menu" uib-dropdown-menu>
+                <li ng-repeat="item in userOperation">
+                    <a href="javascript:;">{{item}}</a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">其他</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

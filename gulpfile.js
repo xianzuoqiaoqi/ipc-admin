@@ -45,7 +45,7 @@ var srcScript = 'dev/**/*.js',
     
     dstImage = 'res/img/',
     
-    srcHtml = 'dev/tpl/*.html',
+    srcHtml = 'dev/tpl/**/*.html',
     
     dstHtml = 'res/tpl/';
 
@@ -215,10 +215,10 @@ gulp.task('auto', function ()
     gulp.watch(srcJson,['json']);
     // gulp.watch(['dev/**/*.*','index.html'], ['script', 'css', 'less', 'imgmin', 'html', 'lib', 'json', 'server', 'auto']);
     
-    gulp.watch(['res/**/*.*','index.html']).on('change', browserSync.reload);
+    // gulp.watch(['res/**/*.*','index.html']).on('change', browserSync.reload);
     
 });
 
 //gulp默认任务(集体走一遍,然后开监控);
-gulp.task('default', ['script', 'css', 'less', 'imgmin', 'html', 'lib', 'json', 'server', 'auto']);
-// gulp.task('default', ['script', 'css', 'less', 'imgmin', 'html', 'lib', 'json']);
+gulp.task('default', ['script', 'css', 'less', 'imgmin', 'html', 'lib', 'json','auto']);
+// gulp.task('default', ['script', 'css', 'less', 'imgmin', 'html', 'lib', 'json', 'server', 'auto']);

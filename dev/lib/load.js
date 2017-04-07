@@ -5,10 +5,8 @@
  */
 var load = (function ()
 {
-    //初始化，移除当前所有id为box的节点
-    var load = {
-        onLoading: function ()
-        {
+    return {
+        onLoading: function (){
             if(!document.getElementById('loadBox')){
                 var loadBox = document.createElement('div');
                 document.body.appendChild(loadBox);
@@ -21,8 +19,7 @@ var load = (function ()
             if(document.getElementById('loadBox')){
                 var loadBox = document.getElementById('loadBox');
                 document.body.removeChild(loadBox);
-            }
+            };
         }
-    }
-    return load;
+    };
 }());

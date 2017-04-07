@@ -15,7 +15,7 @@ window.loading={
             baseUrl:baseUrl,
             paths:{
                 "domReady":["https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min","lib/require/domReady.min"],
-                "angular":["https://cdn.bootcss.com/angular.js/1.3.20/angular.min","lib/angular/angular.min"],
+                "angular":["https://cdn.bootcss.com/angular.js/1.5.5/angular.min","lib/angular/angular.min"],
                 "angularTouch":["https://cdn.bootcss.com/angular.js/1.3.20/angular-touch.min","lib/angular/angular-touch.min"],
                 "angularAnimate":["https://cdn.bootcss.com/angular.js/1.3.20/angular-animate.min","lib/angular/angular-animate.min"],
                 "uiBootstrap":["https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min","lib/angular/ui-bootstrap-tpls.min"],

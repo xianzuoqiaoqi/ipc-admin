@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="res/lib/bootstrap/bootstrap.min.css">
+    <style>
+        html, body, div {background: #F0F3F4}
+        .login{width:300px;margin:200px auto}
+        .login>h3,.login>h5{text-align: center;}
+        input,button{margin-top: 20px;}
+        button{width:300px;}
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <h3>IPC后台管理</h3>
+    <h5>sign in</h5>
+    <form name="userInfo">
+        <input id="username" name="username" class="form-control" placeholder="用户名">
+        <input id="password" name="password" type="password" class="form-control" placeholder="密码">
+    </form>
+    <button class="btn btn-default">登陆</button>
+</div>
+<script src="res/lib/jquery/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.btn').on('click',function(){
+            var username = $('#username').val();
+            var password = $('#password').val();
+            var data = {
+                username:username,
+                password:password
+            };
+            $.ajax({
+                url:'login.html',
+                type:'POST',
+                data:data,
+                success:function(jsonData){
+                    location.href = "index.html";
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

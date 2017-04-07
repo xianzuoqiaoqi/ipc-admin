@@ -1,0 +1,10 @@
+<div id="left" style="color: #d6e9c6;">
+    <div class="leftItem">
+        <div class="item" ng-repeat="Item in leftItem">
+            <div class="title" ng-click="toggle($index)"><i class="icon ion-arrow-right-b"></i> {{ Item.name }}</div>
+            <div class="detail" ng-show="Item.isShow">
+                <div class="subItem" ng-repeat="subItem in Item.subNames"><a ng-click="dosth()" ui-sref="{{ subItem.subRoute }}">{{ subItem.name }}</a></div>
+            </div>
+        </div>
+    </div>
+</div>

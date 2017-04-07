@@ -1,0 +1,42 @@
+{
+  "leftItem": [
+    {
+      "id":1,
+      "name": "用户管理",
+      "subNames": [
+        {"name": "用户列表","subRoute": "userList"},
+        {"name": "新建用户","subRoute": "userCollect"}
+      ]
+    },
+    {
+      "id":2,
+      "name": "设备管理",
+      "subNames": [
+        {"name": "产品列表","subRoute": "productList"}
+      ]
+    },
+    {
+      "id":3,
+      "name": "报表管理",
+      "subNames": [
+        {"name": "订单列表","subRoute": "orderList"}
+      ]
+    },
+    {
+      "id":4,
+      "name": "系统管理",
+      "subNames": [
+        {"name": "文章列表","subRoute": "articleList"},
+        {"name": "文章栏目","subRoute": "articleColumn"}
+      ]
+    },
+    {
+      "id":5,
+      "name": "app升级管理",
+      "subNames": [
+        {"name": "相册列表","subRoute": "photoList"},
+        {"name": "相册栏目","subRoute": "photoColumn"}
+      ]
+    }
+  ]
+}
