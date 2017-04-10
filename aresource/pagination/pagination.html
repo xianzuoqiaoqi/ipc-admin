@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <title></title>
+</head>
+<body ng-controller="PaginationDemoCtrl">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>账号</th>
+                    <th>注册时间</th>
+                    <th>设备编号</th>
+                    <th>操作</th>
+                </tr>
+                <tr ng-repeat="user in userList">
+                    <td>{{ user.userName }}</td>
+                    <td ng-bind="user.joinTime | date:'MM/dd/yyyy'"></td>
+                    <td>{{ user.ID }}</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div>
+                <div uib-pagination total-items="totalItems" ng-change="pageChange()" ng-model="currentPage" max-size="maxSize" first-text="第一页" previous-text="上一页"
+                     next-text="下一页" last-text="最后页" boundary-links="true" boundary-link-numbers="true"></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<script src="frame/angular.min.js"></script>
+<script src="frame/ui-bootstrap-tpls.min.js"></script>
+
+<script>
+    angular.module('myApp', ['ui.bootstrap']).controller('PaginationDemoCtrl', function ($scope, $http)
+    {
+        var getUserList = function (url, data)
+        {
+            $http({
+                method: 'POST',
+                url: url,
+                params: data,
+                data:data
+            })
+                    .success(function (data)
+                    {
+                        console.log('ajax返回数据成功');
+                        $scope.userList = data.userList;
+                        $scope.totalItems = data.totalItems;
+                    })
+                    .error(function (error)
+                    {
+                        console.log(error);
+                    })
+        };
+        //初始化,请求第一页，每页10条
+        var userListInit = function ()
+        {
+            $scope.maxSize = 5;//设置显示几个页码，其他的用...概替。可以直接在指令里设置
+            
+            $scope.itemsPerPage = 10;//每页10条
+            $scope.currentPage = 1;//初始页码1
+            //参数
+            $scope.pageInfo = {
+                currentPage: $scope.currentPage,
+                itemsPerPage: $scope.itemsPerPage
+            };
+            getUserList('json/userList.json', $scope.pageInfo);
+        };
+        userListInit();
+        //定义请求数据的函数，传入url和参数
+        
+        $scope.pageChange = function(){
+            console.log($scope.currentPage);    //此时currentPage为新索要的页数
+            getUserList('json/userList.json',$scope.pageInfo);
+        }
+    });
+</script>
+</body>
+</html>

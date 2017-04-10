@@ -33,8 +33,19 @@ define(['require','app','loadCss','myService'],function(require,app,loadCss){
                 },
                 link:function(scope,ele,attr){
                     scope.toggle = function(index){
-                        scope.leftItem[index].isShow = !scope.leftItem[index].isShow;
+                        this.Item.isShow = !this.Item.isShow;
                     };
+                }
+            }
+        })
+        .directive('appContent',function(){
+            return {
+                restrict:'AE',
+                replace:true,
+                scope:{},
+                templateUrl:'res/tpl/block/app-content.html',
+                controller:function($scope){
+                    loadCss.loadCss('res/css/content.css');
                 }
             }
         })

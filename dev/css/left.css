@@ -1,4 +1,9 @@
-#left{width:150px;position: absolute;top:50px;bottom:0;background: #333744}
-#left .title{padding:5px 10px 5px 10px;cursor: pointer; background: #5cb85c}
+#left{width:150px;position: absolute;top:50px;bottom:0;background: #4A5064;color:#fff;font-size: 14px;}
+#left .leftItem{padding-top: 20px;}
+#left .title{padding:5px 10px 5px 10px;cursor: pointer; background: rgba(255,255,255,.1)}
 #left .title:hover{background: #3B9895}
-#left .detail{padding:5px 0 5px 20px;background: #2b542c}
+#left .title i{margin-right: 10px;}
+/*#left .detail{padding:5px 0 5px 20px;background: #42485b}*/
+#left .detail .subItem{padding:5px 0 5px 35px;background: #414151;cursor: pointer;}
+#left .detail .subItem a{color:#fff;text-decoration: none;}
+#left .detail .subItem:hover{background: rgb(70,80,100)}

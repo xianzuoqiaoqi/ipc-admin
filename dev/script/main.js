@@ -26,7 +26,7 @@ window.loading={
                 "echarts":["https://cdn.bootcss.com/echarts/3.4.0/echarts.min","lib/echarts/echarts.min"],
                 "chinaMap":"lib/echarts/china",
                 "loadCss":"script/loadCss",
-                'load':"lib/load",
+                'load':"script/load",
                 "routes":"script/routes",
                 "app":"script/app",
                 "index":"script/index",
