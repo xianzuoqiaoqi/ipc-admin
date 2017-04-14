@@ -1,1 +1,1 @@
-define(["require","app"],function(require,app){app.factory("myService",function($http){var service={};return service.getJson=function(url,requestData){return $http({method:"GET",url:url,params:requestData})},service})});
+define(["require","app"],function(require,app){app.factory("myService",function($http){var service={};return service.getJson=function(url,requestData,method){return load.onLoading(),$http({method:method||"GET",url:url,params:requestData,data:requestData})},service})});

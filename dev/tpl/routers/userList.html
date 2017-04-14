@@ -1,11 +1,15 @@
 <div id="user-list">
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <li class="active">用户列表</li>
+    </ol>
     <div class="container-fluid">
         <div class="row">
-            <div class="search col-xs-3">
+            <div class="search col-xs-5">
                 <input type="text" class="form-control" placeholder="Email/Phone/ID">
             </div>
-            <div class="add-user col-xs-2 col-xs-offset-7">
-                <button class="btn btn-primary pull-right">新建用户</button>
+            <div class="add-user col-xs-2 col-xs-offset-5">
+                <button class="btn btn-primary pull-right"><a ui-sref="adduser" style="color: #fff;">新建用户</a></button>
             </div>
             <div class="col-xs-12">
                 <table class="table table-bordered table-hover">
@@ -19,7 +23,7 @@
                         <td>{{ user.userName }}</td>
                         <td ng-bind="user.joinTime | date:'MM/dd/yyyy'"></td>
                         <td>{{ user.ID }}</td>
-                        <td> <i class="ion ion-compose"></i> <i class="ion ion-log-in"></i> </td>
+                        <td><a ui-sref="user-detail"><i class="ion ion-log-in"></i></a> <i class="ion ion-compose"></i> </td>
                     </tr>
                 </table>
             </div>

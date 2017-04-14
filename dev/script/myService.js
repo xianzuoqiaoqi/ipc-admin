@@ -10,13 +10,14 @@ define(['require', 'app'], function (require, app)
     {
         var service = {};
         //ajax获取json数据
-        service.getJson = function (url,requestData)
+        service.getJson = function (url,requestData,method)
         {
-            // load.onLoading();
+            load.onLoading();
             return $http({
-                method: "GET",
+                method: method || 'GET',
                 url: url,
-                params:requestData
+                params:requestData,
+                data:requestData
             });
         };
         return service;

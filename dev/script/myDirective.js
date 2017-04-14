@@ -28,7 +28,6 @@ define(['require','app','loadCss','myService'],function(require,app,loadCss){
                     myService.getJson('res/json/leftItem.json')
                         .success(function(data){
                             $scope.leftItem = data.leftItem;
-                            console.log($scope.leftItem)
                         });
                 },
                 link:function(scope,ele,attr){
