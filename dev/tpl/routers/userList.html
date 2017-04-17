@@ -14,24 +14,29 @@
             <div class="col-xs-12">
                 <table class="table table-bordered table-hover">
                     <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>状态</th>
                         <th>账号</th>
-                        <th>注册时间</th>
-                        <th>设备编号</th>
+                        <th>登陆类型</th>
+                        <th>更新日期</th>
+                        <th>创建日期</th>
                         <th>操作</th>
                     </tr>
                     <tr ng-repeat="user in userList">
+                        <td>{{ user.accountId }}</td>
                         <td>{{ user.userName }}</td>
-                        <td ng-bind="user.joinTime | date:'MM/dd/yyyy'"></td>
-                        <td>{{ user.ID }}</td>
+                        <td ng-bind="user.accountStatus === 'active'?'激活':'未激活'"></td>
+                        <td>{{ user.loginName }}</td>
+                        <td ng-bind="user.loginType === 'email'?'邮箱':'手机'"></td>
+                        <td ng-bind="user.updateDate | date:'MM/dd/yyyy'"></td>
+                        <td ng-bind="user.creatDate | date:'MM/dd/yyyy'"></td>
                         <td><a ui-sref="user-detail"><i class="ion ion-log-in"></i></a> <i class="ion ion-compose"></i> </td>
                     </tr>
                 </table>
             </div>
             <div class="col-xs-12">
                     <div uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChange($page)" max-size="maxSize" first-text="首页" previous-text="上一页" next-text="下一页" last-text="尾页" boundary-links="true" boundary-link-numbers="true"></div>
-            </div>
-            <div class="col-xs-2">
-                
             </div>
         </div>
     </div>

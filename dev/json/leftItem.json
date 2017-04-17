@@ -12,7 +12,8 @@
       "id":2,
       "name": "设备管理",
       "subNames": [
-        {"name": "产品列表","subRoute": "productList"}
+        {"name": "设备列表","subRoute": "productList"},
+        {"name": "直播管理","subRoute": "liveAdmin"}
       ]
     },
     {

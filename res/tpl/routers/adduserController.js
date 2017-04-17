@@ -1,0 +1,1 @@
+define(function(require){var app=require("app");require("myService"),require("load"),loadCss=require("loadCss"),loadCss.loadCss("res/css/adduser.css"),app.controller("adduserController",function($scope,myService){console.log("adduser"),$scope.sub=function(){console.log("正在提交。。。。.")}})});
