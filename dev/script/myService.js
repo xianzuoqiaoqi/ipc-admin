@@ -14,7 +14,7 @@ define(['require', 'app'], function (require, app)
         {
             load.onLoading();
             return $http({
-                method: method || 'GET',
+                method: method||'GET',
                 url: url,
                 params:requestData,
                 data:requestData
