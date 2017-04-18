@@ -1,5 +1,5 @@
 {
-  "userList":[
+  "userInfoList":[
     {"accountId":"1","userName":"15036595297","accountStatus":"active","loginName":"15036595297","loginType":"mobile","updateDate":"12312312312","creatDate":"12312312312"},
     {"accountId":"2","userName":"15036595297","accountStatus":"inactive","loginName":"15036595297","loginType":"email","updateDate":"12312312312","creatDate":"12312312312"},
     {"accountId":"3","userName":"15036595297","accountStatus":"active","loginName":"15036595297","loginType":"mobile","updateDate":"12312312312","creatDate":"12312312312"},
@@ -11,5 +11,5 @@
     {"accountId":"9","userName":"15036595297","accountStatus":"active","loginName":"15036595297","loginType":"email","updateDate":"12312312312","creatDate":"12312312312"},
     {"accountId":"10","userName":"15036595297","accountStatus":"inactive","loginName":"15036595297","loginType":"mobile","updateDate":"12312312312","creatDate":"12312312312"}
   ],
-  "totalItems":"199"
+  "totalCount":"10"
 }

@@ -42,6 +42,12 @@ define(["require","app"],function(require,app){
                 url:'/userDetail',
                 templateUrl:'res/tpl/routers/user-detail.html'
             })
+            .state('pList',{
+                url:'/pList',
+                templateUrl:'res/tpl/routers/pList.html',
+                controllerUrl:'tpl/routers/pListController',
+                controller:'pListController'
+            })
     });
     //配置路由结束
 })
