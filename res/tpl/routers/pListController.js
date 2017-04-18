@@ -1,0 +1,1 @@
+define(function(require){var app=require("app");require("myService"),require("load"),loadCss=require("loadCss"),loadCss.loadCss("res/css/pList.css"),app.controller("pListController",function($scope){console.log("pListController")})});
