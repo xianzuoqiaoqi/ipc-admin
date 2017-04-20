@@ -13,30 +13,33 @@
       "name": "设备管理",
       "subNames": [
         {"name": "设备列表","subRoute": "pList"},
-        {"name": "直播管理","subRoute": "liveAdmin"}
+        {"name": "直播管理","subRoute": "liveAdmin"},
+        {"name": "新建设备","subRoute": "liveAdmin"}
       ]
     },
     {
       "id":3,
       "name": "报表管理",
       "subNames": [
-        {"name": "订单列表","subRoute": "orderList"}
+        {"name": "控制面板","subRoute": "orderList"},
+        {"name": "常用报表","subRoute": "orderList"},
+        {"name": "报表列表","subRoute": "orderList"},
+        {"name": "异常设备","subRoute": "orderList"}
       ]
     },
     {
       "id":4,
       "name": "系统管理",
       "subNames": [
-        {"name": "文章列表","subRoute": "articleList"},
-        {"name": "文章栏目","subRoute": "articleColumn"}
+        {"name": "账号密码管理","subRoute": "articleList"},
+        {"name": "系统参数","subRoute": "articleColumn"}
       ]
     },
     {
       "id":5,
       "name": "app升级管理",
       "subNames": [
-        {"name": "相册列表","subRoute": "photoList"},
-        {"name": "相册栏目","subRoute": "photoColumn"}
+        {"name": "app升级管理","subRoute": "photoList"}
       ]
     }
   ]

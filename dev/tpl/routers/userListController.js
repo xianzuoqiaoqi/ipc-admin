@@ -41,7 +41,7 @@ define(function(require){
             $scope.pageInfo.endTime = isNaN(new Date($scope.dateOption.endTime).getTime())?'':new Date($scope.dateOption.endTime).getTime();
         };
     
-        //展开隐藏设置
+        //时间面板展开隐藏设置
         $scope.startOpen = function() {
             $scope.startPopupOpened = true;
         };
@@ -51,12 +51,6 @@ define(function(require){
         $scope.startPopupOpened = false;
         $scope.endPopupOpened = false;
 
-//        $scope.sear = function(){
-//            console.log(new Date($scope.dateOption.startTime).getTime());
-//            console.log(new Date($scope.dateOption.endTime).getTime());
-//        }
-        
-        
         
         //定义请求某页数据的函数，传入请求地址和请求参数
         var showUserList = function(url,requestData,method){
@@ -87,8 +81,8 @@ define(function(require){
         
         
         //路由加载完成后默认请求第一页
-        var url = 'res/json/userList.json';
-        // var url = '/kinzo-cms/userInfo/userInfoList'
+        var url = 'res/json/userList.json';//本地模拟请求json数据
+        // var url = '/kinzo-cms/userInfo/userInfoList'//联测请求后台数据
         
         showUserList(url,$scope.pageInfo);//发起请求，本地测试
         // showUserList(url,$scope.pageInfo,'POST');//发起请求，联测
