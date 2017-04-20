@@ -12,6 +12,7 @@ define(["require","app"],function(require,app){
             load.onLoading();        //loading animate..
         });
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams){
+            console.log('stateChangeSuccess');
             load.close();           //close animate
         });
     })
