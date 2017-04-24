@@ -33,11 +33,11 @@ define(["require","app"],function(require,app){
                 controllerUrl:'tpl/routers/userListController',
                 controller:'userListController'
             })
-            .state('adduser',{
-                url:'/adduser',
-                templateUrl:'res/tpl/routers/add-user.html',
-                controllerUrl:'tpl/routers/adduserController',
-                controller:'adduserController'
+            .state('addUser',{
+                url:'/addUser',
+                templateUrl:'res/tpl/routers/add-User.html',
+                controllerUrl:'tpl/routers/addUserController',
+                controller:'addUserController'
             })
             .state('userInfo',{
                 url:'/userInfo/:accountId',
@@ -45,11 +45,22 @@ define(["require","app"],function(require,app){
                 controllerUrl:'tpl/routers/userInfoController',
                 controller:'userInfoController'
             })
-            .state('pList',{
-                url:'/pList',
-                templateUrl:'res/tpl/routers/pList.html',
-                controllerUrl:'tpl/routers/pListController',
-                controller:'pListController'
+            .state('ipcList',{
+                url:'/ipcList',
+                templateUrl:'res/tpl/routers/ipcList.html',
+                controllerUrl:'tpl/routers/ipcListController',
+                controller:'ipcListController'
+            })
+            .state('addIpc',{
+                url:'/addIpc',
+                templateUrl:'res/tpl/routers/addIpc.html',
+                controllerUrl:'tpl/routers/addIpcController',
+                controller:'addIpcController'
+            })
+            .state('ipcInfo',{
+                url:'/ipcInfo/:cid',
+                templateUrl:'res/tpl/routers/ipcInfo.html',
+                controllerUrl:'tpl/routers/userInfoController'
             })
     });
     //配置路由结束
