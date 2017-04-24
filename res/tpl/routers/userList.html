@@ -52,8 +52,8 @@
                         <td>{{ user.loginName }}</td>
                         <td ng-bind="user.loginType === 'email'?'邮箱':'手机'"></td>
                         <td ng-bind="user.updateDate | date:'MM/dd/yyyy'"></td>
-                        <td ng-bind="user.creatDate | date:'MM/dd/yyyy'"></td>
-                        <td><a ui-sref="user-detail"><i class="ion ion-log-in"></i></a> <i class="ion ion-compose"></i> </td>
+                        <td ng-bind="user.createDate | date:'MM/dd/yyyy'"></td>
+                        <td><a ui-sref="userInfo({accountId:user.accountId})"><i class="ion ion-log-in"></i></a> <i class="ion ion-compose"></i> </td>
                     </tr>
                 </table>
             </div>

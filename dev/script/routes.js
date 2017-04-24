@@ -39,9 +39,11 @@ define(["require","app"],function(require,app){
                 controllerUrl:'tpl/routers/adduserController',
                 controller:'adduserController'
             })
-            .state('user-detail',{
-                url:'/userDetail',
-                templateUrl:'res/tpl/routers/user-detail.html'
+            .state('userInfo',{
+                url:'/userInfo/:accountId',
+                templateUrl:'res/tpl/routers/userInfo.html',
+                controllerUrl:'tpl/routers/userInfoController',
+                controller:'userInfoController'
             })
             .state('pList',{
                 url:'/pList',

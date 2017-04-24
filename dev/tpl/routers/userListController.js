@@ -81,18 +81,18 @@ define(function(require){
         
         
         //路由加载完成后默认请求第一页
-        var url = 'res/json/userList.json';//本地模拟请求json数据
-        // var url = '/kinzo-cms/userInfo/userInfoList'//联测请求后台数据
+        // var url = 'res/json/userList.json';//本地模拟请求json数据
+        var url = '/kinzo-cms/user/accounts'//联测请求后台数据
         
-        showUserList(url,$scope.pageInfo);//发起请求，本地测试
-        // showUserList(url,$scope.pageInfo,'POST');//发起请求，联测
+        // showUserList(url,$scope.pageInfo);//发起请求，本地测试
+        showUserList(url,$scope.pageInfo);//发起请求，联测
         
         //点击页码时将索要的页码存入ajax请求参数内
         $scope.pageChange = function(){
             console.log($scope.startPage);
             $scope.pageInfo.startPage = $scope.startPage;
-            showUserList(url,$scope.pageInfo);//携带新参数重新请求，本地测试
-            // showUserList(url,$scope.pageInfo,'POST');//携带新参数重新请求，联测
+            // showUserList(url,$scope.pageInfo);//携带新参数重新请求，本地测试
+            showUserList(url,$scope.pageInfo);//携带新参数重新请求，联测
         };
         
         //条件查询
@@ -100,8 +100,8 @@ define(function(require){
             $scope.pageInfo.startPage = 1;//页码初始化为1
             console.log($scope.pageInfo);
             //开始查询
-            showUserList(url,$scope.pageInfo);//发起请求，本地测试
-            // showUserList(url,$scope.pageInfo,'POST');//发起请求，联测
+            // showUserList(url,$scope.pageInfo);//发起请求，本地测试
+            showUserList(url,$scope.pageInfo);//发起请求，联测
         }
     })
 })
