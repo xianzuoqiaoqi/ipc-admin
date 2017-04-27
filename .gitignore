@@ -2,7 +2,5 @@
 node_modules/
 # 忽略.idea文件夹
 .idea/
-# 忽略component文件夹
-component/
-# 忽略backdev 文 件 夹
-backdev/
+# 忽略areSource文件夹
+aresource/
