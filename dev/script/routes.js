@@ -35,7 +35,7 @@ define(["require","app"],function(require,app){
             })
             .state('addUser',{
                 url:'/addUser',
-                templateUrl:'res/tpl/routers/add-User.html',
+                templateUrl:'res/tpl/routers/addUser.html',
                 controllerUrl:'tpl/routers/addUserController',
                 controller:'addUserController'
             })
