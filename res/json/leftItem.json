@@ -14,7 +14,8 @@
       "subNames": [
         {"name": "设备列表","subRoute": "ipcList"},
         {"name": "直播管理","subRoute": "liveAdmin"},
-        {"name": "新建设备","subRoute": "addIpc"}
+        {"name": "新建设备","subRoute": "addIpc"},
+        {"name": "固件版本信息","subRoute": "devVersion"}
       ]
     },
     {

@@ -20,9 +20,11 @@ window.loading={
                 "angularAnimate":["https://cdn.bootcss.com/angular.js/1.3.20/angular-animate.min","lib/angular/angular-animate.min"],
                 "uiBootstrap":["https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min","lib/angular/ui-bootstrap-tpls.min"],
                 "uiRouter":["https://cdn.bootcss.com/angular-ui-router/0.4.2/angular-ui-router.min","lib/angular/angular-ui-router.min"],
+                "angular-sanitize":["https://cdn.bootcss.com/angular.js/1.5.5/angular-sanitize.min","lib/angular/angular-sanitize.min"],
                 "angular-nice-bar":"lib/angular/angular-nice-bar",
                 "asyncLoader":"lib/angular/angular-async-loader",
                 "jquery":["https://cdn.bootcss.com/jquery/1.12.4/jquery.min","lib/jquery/jquery.min"],
+                "layer":["lib/layer/layer"],
                 "echarts":["https://cdn.bootcss.com/echarts/3.4.0/echarts.min","lib/echarts/echarts.min"],
                 "chinaMap":"lib/echarts/china",
                 "loadCss":"script/loadCss",
@@ -47,6 +49,9 @@ window.loading={
                 "angularAnimate":{
                     deps:["angular"]
                 },
+                "angular-sanitize":{
+                    deps:["angular"]
+                },
                 "uiBootstrap":{
                     deps:["angular","angularTouch","angularAnimate"]
                 },
@@ -55,6 +60,9 @@ window.loading={
                 },
                 "angular-nice-bar":{
                     deps:["angular"]
+                },
+                "layer":{
+                    deps:["jquery"]
                 },
                 "echarts":{"exports":"echarts"}
             },

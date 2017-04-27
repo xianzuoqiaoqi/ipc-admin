@@ -81,8 +81,7 @@ define(function(require){
         
         
         //路由加载完成后默认请求第一页
-        // var url = 'res/json/userList.json';//本地模拟请求json数据
-        var url = '/kinzo-cms/user/accounts'//联测请求后台数据
+        var url = 'kinzo-cms/user/accounts'//联测请求后台数据
         
         //页面初始化显示
         showUserList(url,$scope.pageInfo);//发起请求，联测

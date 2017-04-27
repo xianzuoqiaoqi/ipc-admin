@@ -1,1 +1,1 @@
-define(["require","angular","asyncLoader","uiRouter","angularAnimate","angularTouch","angular-nice-bar","uiBootstrap"],function(require,angular,asyncLoader){var app=angular.module("app",["ui.router","ngNiceBar","ui.bootstrap"]);return asyncLoader.configure(app),app});
+define(["require","angular","asyncLoader","uiRouter","angularAnimate","angularTouch","angular-nice-bar","uiBootstrap","angular-sanitize"],function(require,angular,asyncLoader){var app=angular.module("app",["ui.router","ngNiceBar","ui.bootstrap","ngSanitize"]);return asyncLoader.configure(app),app});

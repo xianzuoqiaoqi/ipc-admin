@@ -60,7 +60,8 @@ define(["require","app"],function(require,app){
             .state('ipcInfo',{
                 url:'/ipcInfo/:cid',
                 templateUrl:'res/tpl/routers/ipcInfo.html',
-                controllerUrl:'tpl/routers/userInfoController'
+                controllerUrl:'tpl/routers/ipcInfoController',
+                controller:'ipcInfoController'
             })
     });
     //配置路由结束

@@ -10,14 +10,15 @@ define(['require', 'app'], function (require, app)
     {
         var service = {};
         //ajax获取json数据
+        service.url = "https://easy-mock.com/mock/59006776875d7232a38b139b/ipc/";
         service.getJson = function (url,requestData,method)
         {
             load.onLoading();
             return $http({
                 method: method||'GET',
-                url: url,
-                params:requestData,
-                data:requestData
+                url:service.url+url,
+                params:requestData || '',
+                data:requestData || null
             });
         };
         return service;
