@@ -4,11 +4,10 @@
  * 依赖app、引入
  */
 define(["require","app"],function(require,app){
-    var load = require('load');
     //路由事件
     app.run(function($rootScope,$state,$log){
         $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
-            $rootScope.loadRouter = layer.load(1,{shade:[0.9,'#000']});
+            $rootScope.loadRouter = layer.load(1,{shade:[0.5,'#000']});
         });
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams){
             console.log('stateChangeSuccess');

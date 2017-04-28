@@ -5,9 +5,7 @@
  */
 define(['require', 'app','layer'], function (require, app,layer)
 {
-    layer.config({
-        path:'res/lib/layer/'
-    });
+    
     //服务，存放全局数据
     app.factory('myService', function ($http)
     {

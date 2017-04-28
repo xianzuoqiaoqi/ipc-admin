@@ -1,1 +1,1 @@
-define(["require","load"],function(require,load){load.onLoading(),require(["angular","routes","myDirective"],function(angular){require(["domReady!"],function(document){window.loading.finish(function(){angular.bootstrap(document,["app"]),load.close()})})})});
+define(["require","layer"],function(require,layer){console.log(layer),layer.config({path:"res/lib/layer/"});layer.load(1,{shade:[.5,"#000"]});require(["angular","routes","myDirective"],function(angular){require(["domReady!"],function(document){window.loading.finish(function(){angular.bootstrap(document,["app"])})})})});
