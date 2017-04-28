@@ -4,10 +4,9 @@
  */
 define(["require", "layer"], function (require,layer)
 {
-    console.log(layer)
     layer.config({
         path:'res/lib/layer/'
-    })
+    });
     var startLoading = layer.load(1,{shade:[0.5,'#000']});   //开始执行动画
     require(["angular","routes","myDirective"],function(angular){
         require(['domReady!'], function (document)
