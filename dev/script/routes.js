@@ -7,13 +7,12 @@ define(["require","app"],function(require,app){
     var load = require('load');
     //路由事件
     app.run(function($rootScope,$state,$log){
-        // $rootScope.$state = $state;
         $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
-            load.onLoading();        //loading animate..
+            $rootScope.loadRouter = layer.load(1,{shade:[0.9,'#000']});
         });
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams){
             console.log('stateChangeSuccess');
-            load.close();           //close animate
+            layer.close($rootScope.loadRouter);
         });
     })
     //配置路由

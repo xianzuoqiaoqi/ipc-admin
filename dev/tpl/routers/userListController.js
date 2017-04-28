@@ -5,7 +5,6 @@ define(function(require){
     //加载所需模块
     var app = require('app');
     require('myService');
-    require('load');
     loadCss = require('loadCss');
     loadCss.loadCss('res/css/userList.css');//引入css
     
@@ -54,13 +53,10 @@ define(function(require){
         
         //定义请求某页数据的函数，传入请求地址和请求参数
         var showUserList = function(url,requestData,method){
-            // requestData = $scope.pageInfo;
             
             myService.getJson(url,requestData,method)
             //请求成功时的回调函数，将获取的数据进行处理
                 .success(function(data){
-                    console.log(data);
-                    load.close();
                     $scope.userInfoList = data.userInfoList;//将获取到的列表数据存入scope
                     $scope.totalCount = data.totalCount;//将总条目数存入scope
                     $scope.maxSize = 5;//设置显示的页码数量
@@ -88,7 +84,6 @@ define(function(require){
         
         //点击页码时将索要的页码存入ajax请求参数内
         $scope.pageChange = function(){
-            console.log($scope.startPage);
             $scope.pageInfo.startPage = $scope.startPage;
             //携带新参数重新请求
             showUserList(url,$scope.pageInfo);//携带新参数重新请求，联测
@@ -97,7 +92,6 @@ define(function(require){
         //条件查询
         $scope.goSearch = function(){
             $scope.pageInfo.startPage = 1;//页码初始化为1
-            console.log($scope.pageInfo);
             //开始查询
             showUserList(url,$scope.pageInfo);//发起请求，联测
         }
