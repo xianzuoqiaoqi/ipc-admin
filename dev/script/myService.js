@@ -14,16 +14,16 @@ define(['require', 'app','layer'], function (require, app,layer)
         service.url = "https://easy-mock.com/mock/59006776875d7232a38b139b/ipc/";
         service.getJson = function (url,requestData,method)
         {
-            // var index = layer.load(1, {
-            //     shade: [0.1,'#fff'] //0.1透明度的白色背景
-            // });
+            var index = layer.load(1, {
+                shade: [0.5,'#000'] //0.1透明度的白色背景
+            });
             return $http({
                 method: method||'GET',
                 url:service.url+url,
                 params:requestData || '',
                 data:requestData || null
             }).success(function(){
-                // layer.close(index);
+                layer.close(index);
             });
         };
         return service;
