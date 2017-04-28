@@ -11,7 +11,7 @@ define(['require', 'app','layer'], function (require, app,layer)
     {
         var service = {};
         //ajax获取json数据
-        service.url = "https://easy-mock.com/mock/59006776875d7232a38b139b/ipc/";
+        service.url = "https://easy-mock.com/mock/5902c5887a878d73716ded63/ipc-admin/";
         service.getJson = function (url,requestData,method)
         {
             var index = layer.load(1, {
