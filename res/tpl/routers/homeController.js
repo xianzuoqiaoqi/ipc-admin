@@ -1,1 +1,0 @@
-define(function(require){var app=require("app");require("myService"),require("loadCss").loadCss("res/css/home.css"),app.controller("homeController",function($scope,myService){})});

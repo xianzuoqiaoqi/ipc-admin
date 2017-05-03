@@ -1,1 +1,0 @@
-define(function(require){var app=require("app");require("myService");require("loadCss");console.log(111),app.controller("firmwareInfoController",function($scope,myService,$stateParams){})});

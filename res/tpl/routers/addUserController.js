@@ -1,1 +1,0 @@
-define(function(require){var app=require("app");require("myService"),require("loadCss").loadCss("res/css/addUser.css"),app.controller("addUserController",function($scope,myService){$scope.sub=function(){console.log("正在提交。。。 。..")}})});
