@@ -3,48 +3,77 @@
  * 配置directive、
  * 依赖app、myService
  */
-define(['require','app','loadCss','myService'],function(require,app,loadCss){
-    app.directive('appTop',function(){
+define(['require', 'app', 'loadCss', 'myService'], function (require, app, loadCss)
+{
+    app.directive('appTop', function ()
+    {
         return {
-            restrict:'AE',
+            restrict: 'AE',
             replace: true,
-            scope:{},
+            scope: {},
             templateUrl: 'res/tpl/block/app-top.html',
-            controller: function($scope,myService){
+            controller: function ($scope, myService)
+            {
                 loadCss.loadCss('res/css/top.css');
-                $scope.username='zzq';
-                $scope.userOperation = ['个人档案','更改密码','退出登录'];
+                $scope.username = 'zzq';
+                $scope.userOperation = ['个人档案', '更改密码', '退出登录'];
             }
         }
     })
-        .directive('appLeft',function(){
+        .directive('appLeft', function ()
+        {
             return {
-                restrict:'AE',
+                restrict: 'AE',
                 replace: true,
-                scope:{},
+                scope: {},
                 templateUrl: 'res/tpl/block/app-left.html',
-                controller: function($scope,myService){
+                controller: function ($scope, myService)
+                {
                     loadCss.loadCss('res/css/left.css');
                     myService.getJson('res/json/leftItem.json')
-                        .success(function(data){
+                        .success(function (data)
+                        {
                             $scope.leftItem = data.leftItem;
                         });
                 },
-                link:function(scope,ele,attr){
-                    scope.toggle = function(index){
+                link: function (scope, ele, attr)
+                {
+                    scope.toggle = function (index)
+                    {
                         this.Item.isShow = !this.Item.isShow;
                     };
                 }
             }
         })
-        .directive('appContent',function(){
+        .directive('appContent', function ()
+        {
             return {
-                restrict:'AE',
-                replace:true,
-                scope:{},
-                templateUrl:'res/tpl/block/app-content.html',
-                controller:function($scope){
+                restrict: 'AE',
+                replace: true,
+                scope: {},
+                templateUrl: 'res/tpl/block/app-content.html',
+                controller: function ($scope)
+                {
                     loadCss.loadCss('res/css/content.css');
+                }
+            }
+        })
+        .directive('canUse', function ()
+        {
+            return {
+                restrict: 'AE',
+                scope: {},
+                link: function ($scope, $element, $attr)
+                {
+                    $element.addClass('aaaaaa');
+                    $attr.$set("disabled",false);
+                    $element.on('mouseenter', function ()
+                    {
+                    
+                    })
+                    $element.on('mouseleave', function ()
+                    {
+                    });
                 }
             }
         })
