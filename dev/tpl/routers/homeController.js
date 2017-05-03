@@ -1,0 +1,1 @@
+/** * Created by zzq on 2017/5/3. */define(function (require){    //加载所需模块    var app = require('app');    require('myService');    var loadCss = require('loadCss');    loadCss.loadCss('res/css/home.css');//引入css        app.controller('homeController',function ($scope,myService)    {        })})

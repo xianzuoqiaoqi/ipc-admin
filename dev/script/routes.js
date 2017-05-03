@@ -19,48 +19,107 @@ define(["require","app"],function(require,app){
         $urlRouterProvider.otherwise('/home'),
 
         $stateProvider
-            .state('home',{
+            .state('home',{//首页，计划放控制面板
                 url:'/home',
-                templateUrl:'res/tpl/routers/home.html',
+                views:{
+                    "":{
+                        templateUrl:"res/tpl/routers/home.html",
+                        controllerUrl:"tpl/routers/homeController",
+                        controller:"homeController"
+                    },
+                    "userList@home":{
+                        templateUrl:'res/tpl/routers/userList.html',
+                        controllerUrl:'tpl/routers/userListController',
+                        controller:'userListController'
+                    },
+                    "addUser@home":{
+                        templateUrl:'res/tpl/routers/addUser.html',
+                        controllerUrl:'tpl/routers/addUserController',
+                        controller:'addUserController'
+                    },
+                    "userInfo@home":{
+                        templateUrl:'res/tpl/routers/userInfo.html',
+                        controllerUrl:'tpl/routers/userInfoController',
+                        controller:'userInfoController'
+                    },
+                    "ipcList@home":{
+                        templateUrl:'res/tpl/routers/ipcList.html',
+                        controllerUrl:'tpl/routers/ipcListController',
+                        controller:'ipcListController'
+                    },
+                    "addIpc@home":{
+                        templateUrl:'res/tpl/routers/addIpc.html',
+                        controllerUrl:'tpl/routers/addIpcController',
+                        controller:'addIpcController'
+                    },
+                    "ipcInfo@home":{
+                        templateUrl:'res/tpl/routers/ipcInfo.html',
+                        controllerUrl:'tpl/routers/ipcInfoController',
+                        controller:'ipcInfoController'
+                    },
+                    "devTypeList@home":{
+                        templateUrl:'res/tpl/routers/devTypeList.html',
+                        controllerUrl:'tpl/routers/devTypeListController',
+                        controller:'devTypeListController'
+                    },
+                    "firmwareInfo@home":{
+                        templateUrl:'res/tpl/routers/firmwareInfo.html',
+                        controllerUrl:'tpl/routers/firmwareInfoController',
+                        controller:'firmwareInfoController'
+                    }
+                }
                 // controllerUrl:'tpl/userCollectController',
                 // controller:'userCollectController'
             })
-            .state('userList',{
+            .state('userList',{//用户列表
                 url:'/userlist',
                 templateUrl:'res/tpl/routers/userList.html',
                 controllerUrl:'tpl/routers/userListController',
                 controller:'userListController'
             })
-            .state('addUser',{
+            .state('addUser',{//添加用户
                 url:'/addUser',
                 templateUrl:'res/tpl/routers/addUser.html',
                 controllerUrl:'tpl/routers/addUserController',
                 controller:'addUserController'
             })
-            .state('userInfo',{
+            .state('userInfo',{//用户信息
                 url:'/userInfo/:accountId',
                 templateUrl:'res/tpl/routers/userInfo.html',
                 controllerUrl:'tpl/routers/userInfoController',
                 controller:'userInfoController'
             })
-            .state('ipcList',{
+            .state('ipcList',{//设备列表
                 url:'/ipcList',
                 templateUrl:'res/tpl/routers/ipcList.html',
                 controllerUrl:'tpl/routers/ipcListController',
                 controller:'ipcListController'
             })
-            .state('addIpc',{
+            .state('addIpc',{//新增设备
                 url:'/addIpc',
                 templateUrl:'res/tpl/routers/addIpc.html',
                 controllerUrl:'tpl/routers/addIpcController',
                 controller:'addIpcController'
             })
-            .state('ipcInfo',{
+            .state('ipcInfo',{//设备详情
                 url:'/ipcInfo/:cid',
                 templateUrl:'res/tpl/routers/ipcInfo.html',
                 controllerUrl:'tpl/routers/ipcInfoController',
                 controller:'ipcInfoController'
             })
+            .state('devTypeList',{//设备型号列表
+                url:'/devTypeList',
+                templateUrl:'res/tpl/routers/devTypeList.html',
+                controllerUrl:'tpl/routers/devTypeListController',
+                controller:'devTypeListController'
+            })
+            .state('firmwareInfo',{//设备固件版本信息
+                url:'/firmwareInfo/:devTypeId',
+                templateUrl:'res/tpl/routers/firmwareInfo.html',
+                controllerUrl:'tpl/routers/firmwareInfoController',
+                controller:'firmwareInfoController'
+            })
     });
     //配置路由结束
 })
+

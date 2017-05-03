@@ -4,3 +4,5 @@ node_modules/
 .idea/
 # 忽略areSource文件夹
 aresource/
+# 忽略easy-mock数据接口地址文件
+easy-mock.txt

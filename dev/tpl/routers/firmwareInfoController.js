@@ -1,0 +1,1 @@
+/** * Created by zzq on 2017/5/3. */define(function(require){    //加载所需模块    var app = require('app');    require('myService');    var loadCss = require('loadCss');    console.log(111)    //控制器    app.controller('firmwareInfoController',function($scope,myService,$stateParams){        })})
