@@ -1,7 +1,7 @@
 {
   "name": "z-admin",
   "version": "1.0.0",
-  "description": "������后台管理模板，样式仿的loinver的管理系统",
+  "description": "kinzo-IPC后台管理系统",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,11 +13,11 @@
     "eslint": "^3.18.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
     "gulp-eslint": "^3.0.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-less": "^3.3.0",
-    "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^2.1.2",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-optipng": "^5.2.1",
