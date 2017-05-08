@@ -1,0 +1,26 @@
+<div id="add-update">
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <li class="active">IOS产品列表</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table-bordered table">
+                <tr>
+                    <th>产品ID</th>
+                    <th>产品名称</th>
+                    <th>当前版本号</th>
+                    <th>更新日期</th>
+                    <th>操作</th>
+                </tr>
+                <tr ng-repeat="app in AppList">
+                    <td>{{ app.appId }}</td>
+                    <td>{{ app.appName }}</td>
+                    <td>{{ app.appCurrentVersion }}</td>
+                    <td>{{ app.appUpdate }}</td>
+                    <td><a ui-sref="appInfo({appId:app.appId})"><i class="ion ion-log-in"></i></a> <i class="ion ion-compose"></i> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

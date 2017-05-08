@@ -1,0 +1,1 @@
+define(function(require){var app=require("app");require("myService");require("loadCss");app.controller("appUpdateController",function($scope,myService){})});

@@ -1,0 +1,1 @@
+define(function(require){var app=require("app");require("myService");require("loadCss");app.controller("AndroidUpdateController",function($scope,myService){})});

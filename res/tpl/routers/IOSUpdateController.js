@@ -1,0 +1,1 @@
+define(function(require){var app=require("app");require("myService");require("loadCss");app.controller("IOSUpdateController",function($scope,myService){myService.getJson("/kinzo-cms/appList/IOS").success(function(data){$scope.AppList=data.appList})})});
