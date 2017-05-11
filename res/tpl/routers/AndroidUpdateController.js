@@ -1,1 +1,1 @@
-define(function(require){var app=require("app");require("myService");require("loadCss");app.controller("AndroidUpdateController",function($scope,myService){})});
+define(function(require){var app=require("app");require("myService");require("loadCss");app.controller("AndroidUpdateController",function($scope,myService){myService.getJson("/kinzo-cms/appList/Android").success(function(data){$scope.appList=data.appList,console.log(data)})})});

@@ -137,6 +137,12 @@ define(["require", "app"], function (require, app) {
                         controllerUrl:'tpl/routers/appInfoController',
                         controller:'appInfoController'
                     })
+                    .state('AndroidInfo', {//一款app的详细信息
+                        url:'/Android/:appId',
+                        templateUrl:'res/tpl/routers/AndroidInfo.html',
+                        controllerUrl:'tpl/routers/AndroidInfoController',
+                        controller:'AndroidInfoController'
+                    })
 
         });
     //配置路由结束
