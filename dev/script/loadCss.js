@@ -10,7 +10,7 @@ define(function(){
         head=document.querySelector('head');
         head.appendChild(link);
     }
-    
+
     return {
         loadCss:loadCss
     }
