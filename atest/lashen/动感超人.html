@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+</head>
+<body ng-app="myApp">
+<div class="col-md-3">
+    <superman strength>动感超人-力量</superman>
+</div>
+<div class="col-md-3">
+    <superman strength speed>动感超人-力量+敏捷</superman>
+</div>
+<div class="col-md-3">
+    <superman strength speed light>动感超人-力量+敏捷+发光</superman>
+</div>
+<script src="lib/angular.js"></script>
+<script>
+angular.module('myApp',[])
+    .directive('superman',function(){
+        return {
+            restrict:'AE',
+            scope:{},
+            controller:function($scope){
+                $scope.abilities = [];
+                this.addStrength = function(){
+                    $scope.abilities.push("strength");
+                };
+                this.addSpeed = function(){
+                    $scope.abilities.push("speed");
+                };
+                this.addLight = function(){
+                    $scope.abilities.push('light');
+                };
+            },
+            link:function(scope,ele,attrs){
+                ele.addClass('btn btn-primary');
+                ele.bind('mouseenter',function(){
+                    console.log(scope.abilities);
+                });
+            }
+        }
+    })
+    .directive('strength',function(){
+        return {
+            require:'^superman',
+            link:function(scope,ele,attrs,superCtrl){
+                superCtrl.addStrength();
+            }
+        }
+    })
+    .directive('speed',function(){
+        return {
+            require:'^superman',
+            link:function(scope,ele,attrs,superCtrl){
+                superCtrl.addSpeed();
+            }
+        }
+    })
+    .directive('light',function(){
+        return {
+            require:'^superman',
+            link:function(scope,ele,attrs,superCtrl){
+                superCtrl.addLight();
+            }
+        }
+    });
+</script>
+</body>
+</html>
