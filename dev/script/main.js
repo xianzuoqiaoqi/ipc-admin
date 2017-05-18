@@ -30,6 +30,10 @@ window.loading = {
                 "ZeroClipboard": "lib/UEditor/third-party/zeroclipboard/ZeroClipboard.min",//需要将这个模块定义为全局变量
                 "echarts": ["https://cdn.bootcss.com/echarts/3.4.0/echarts.min", "lib/echarts/echarts.min"],
                 "chinaMap": "lib/echarts/china",
+                "zui":"lib/zui/js/zui",
+                "dashBoard":"lib/zui/dashboard/zui.dashboard",
+
+
                 "loadCss": "script/loadCss",
                 'load': "script/load",
                 "routes": "script/routes",
@@ -75,6 +79,12 @@ window.loading = {
                 },
                 "echarts": {
                     "exports": "echarts"
+                },
+                "zui":{
+                    deps:['jquery']
+                },
+                "dashBoard":{
+                    deps:['zui']
                 }
             },
             deps: ['index']

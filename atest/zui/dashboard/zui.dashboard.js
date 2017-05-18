@@ -1,7 +1,7 @@
 /*!
- * ZUI: 仪表盘 - v1.6.0 - 2017-03-16
+ * ZUI: 仪表盘 - v1.6.0 - 2017-05-18
  * http://zui.sexy
- * GitHub: https://github.com/easysoft/zui.git
+ * GitHub: https://github.com/easysoft/zui.git 
  * Copyright (c) 2017 cnezsoft.com; Licensed MIT
  */
 
@@ -524,3 +524,4 @@
 
     $.fn.dashboard.Constructor = Dashboard;
 }(jQuery, Math, undefined));
+

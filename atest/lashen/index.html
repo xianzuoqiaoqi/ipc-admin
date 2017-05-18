@@ -17,7 +17,7 @@
     <div class="row">
         <div><button class="btn btn-primary" ng-click="dosth()">点击</button></div>
         <div class="row">
-            <my-box ng-repeat="myModule in modules track by myModule.order"></my-box>
+            <my-box ng-repeat="myModule in modules | orderBy :'order'" my-order="myModule.order" my-grid="myModule.grid" my-content="myModule.content"></my-box>
         </div>
     </div>
 </div>

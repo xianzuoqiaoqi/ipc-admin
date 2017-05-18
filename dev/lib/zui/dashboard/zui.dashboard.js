@@ -1,7 +1,7 @@
 /*!
- * ZUI: 仪表盘 - v1.6.0 - 2017-03-16
+ * ZUI: 仪表盘 - v1.6.0 - 2017-05-18
  * http://zui.sexy
- * GitHub: https://github.com/easysoft/zui.git
+ * GitHub: https://github.com/easysoft/zui.git 
  * Copyright (c) 2017 cnezsoft.com; Licensed MIT
  */
 
@@ -14,22 +14,19 @@
 
 
 (function($, Math, undefined) {
-    // $为jquery、Math为数学对象
     'use strict';
 
-    //placement-->安置
     var dashboardMessager = $.zui.Messager ? new $.zui.Messager({placement: 'top', time: 1500, close: 0, scale: false, fade: false}) : 0;
 
-    //定义构造函数
-    var Dashboard = function(element, options) {//传入element和options
-        this.$ = $(element);//element
+    var Dashboard = function(element, options) {
+        this.$ = $(element);
         this.options = this.getOptions(options);
         this.draggable = this.$.hasClass('dashboard-draggable') || this.options.draggable;
 
         this.init();
     };
 
-    Dashboard.DEFAULTS = {//做默认配置，Dashboard是一个函数，以这种方式存储数据，在打印Dashboard时不能看到，但是能通过Dashboard拿到这个配置
+    Dashboard.DEFAULTS = {
         minHeight: 100,
         height: 360,
         shadowType: 'normal',
@@ -39,10 +36,9 @@
         resizable: true, // 'vertical', 'horizontal'
         resizeMessage: false
     };
-    //添加原型方法
+
     Dashboard.prototype.getOptions = function(options) {
-        //-----将默认配置、、合并后存入options然后返回
-        options = $.extend({}, Dashboard.DEFAULTS, this.$.data(), options);//extend合并到第一个对象参数里
+        options = $.extend({}, Dashboard.DEFAULTS, this.$.data(), options);
         return options;
     };
 
@@ -513,19 +509,14 @@
 
         that.$.find('[data-toggle="tooltip"]').tooltip({container: 'body'});
     };
-/*
- * $.fn是指jquery的命名空间，加上fn的方法和属性，会对jquery的每个实例有效
- * eg:
- * $.fn.abc=function(){}
- * $('#div').abc();
- */
-    $.fn.dashboard = function(option) { //这样做之后，每个$('')实例就都有了dashboard这个方法
-        return this.each(function() { //this指向dom实例
-            var $this = $(this);
-            var data = $this.data('zui.dashboard');//取到存在这个dom上的数据
-            var options = typeof option == 'object' && option;//如果options是一个对象那么将option存入options
 
-            if(!data) $this.data('zui.dashboard', (data = new Dashboard(this, options)));//如果data不存在，往这个dom上隐藏zui.dashboard数据，数据为构造函数Dashboard的实例
+    $.fn.dashboard = function(option) {
+        return this.each(function() {
+            var $this = $(this);
+            var data = $this.data('zui.dashboard');
+            var options = typeof option == 'object' && option;
+
+            if(!data) $this.data('zui.dashboard', (data = new Dashboard(this, options)));
 
             if(typeof option == 'string') data[option]();
         });
@@ -533,3 +524,4 @@
 
     $.fn.dashboard.Constructor = Dashboard;
 }(jQuery, Math, undefined));
+
