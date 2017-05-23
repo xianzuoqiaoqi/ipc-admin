@@ -7,16 +7,14 @@ define(function (require) {
     require('myService');
     var loadCss = require('loadCss');
     loadCss.loadCss('res/css/AndroidInfo.css');
-    loadCss.loadCss('res/lib/textAngular/font-awesome/css/font-awesome.min.css');
-    loadCss.loadCss('res/lib/textAngular/textAngular.css');
+    loadCss.loadCss('res/lib/angular-trix/trix.css');
 
     //引入UEditor插件
-    var textAngularManager = require('textAngular');
 
 
     //控制器
-    app.controller('AndroidInfoController', function ($scope, myService,textAngularManager) {
-        //实例化编辑器并配置
+    app.controller('AndroidInfoController', function ($scope, myService) {
+        $scope.foo = "<h1>halo</h1>"
 
 
         //初始化页面显示内容

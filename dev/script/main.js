@@ -25,14 +25,10 @@ window.loading = {
                 "asyncLoader": "lib/angular/angular-async-loader",
                 "jquery": ["https://cdn.bootcss.com/jquery/1.12.4/jquery.min", "lib/jquery/jquery.min"],
                 "layer": ["lib/layer/layer"],
-                "UEditor": ["lib/UEditor/ueditor.all.min"],
-                "UEditorConfig": ["lib/UEditor/ueditor.config"],
-                "ZeroClipboard": "lib/UEditor/third-party/zeroclipboard/ZeroClipboard.min",//需要将这个模块定义为全局变量
-                //angularText
-                "textAngular":["lib/textAngular/textAngular"],
-                "textAngular-rangy":["lib/textAngular/textAngular-rangy.min"],
-                // "textAngular-sanitize":["lib/textAngular/textAngular-sanitize.min"],
 
+                //富文本框
+                "trix":['lib/angular-trix/trix'],
+                'angularTrix':['lib/angular-trix/angular-trix'],
                 "echarts": ["https://cdn.bootcss.com/echarts/3.4.0/echarts.min", "lib/echarts/echarts.min"],
                 "chinaMap": "lib/echarts/china",
                 //zui控制面板
@@ -77,25 +73,11 @@ window.loading = {
                 "layer": {
                     deps: ["jquery"]
                 },
-                "UEditor": {
-                    "exports": "UEditor"
-                },
-                "UEditor": {
-                    deps: ["UEditorConfig"]
-                },
-                "textAngular":{
-                    deps:["angular-sanitize"],
-                    exports:"textAngular"
-                },
-                // "textAngular-sanitize":{
-                //     deps:["textAngular-rangy"],
-                //     exports:'ngSantize'
-                // },
-                "textAngular-rangy":{
-                    deps:["angular"]
-                },
                 "echarts": {
                     "exports": "echarts"
+                },
+                "angularTrix":{
+                    deps:['angular','trix']
                 },
                 "zui":{
                     deps:['jquery']
