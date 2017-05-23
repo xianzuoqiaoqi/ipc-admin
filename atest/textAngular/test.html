@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="textAngular/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="textAngular/font-awesome.min.css">-->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="textAngular/robort.css">
+    <link rel="stylesheet" href="textAngular/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="textAngular/textAngular.css">
+
     <script src="textAngular/angular.js"></script>
     <script src="textAngular/textAngular-rangy.min.js"></script>
     <script src="textAngular/textAngular-sanitize.js"></script>
@@ -18,33 +17,23 @@
 </head>
 <body>
 <div ng-app="textAngularTest" ng-controller="myCtrl" class="container">
-    <!--<button ng-click="disabled = ! disabled" unselectable>Disable Toggle</button>-->
-    <!--<div  text-angular ng-model="htmlVariable"></div>-->
 
-    <!--<div ng-model="htmlContent" ta-bind></div>              &lt;!&ndash;1&ndash;&gt;-->
-    <!--<text-angular ng-model="htmlContent"></text-angular>    &lt;!&ndash;1&ndash;&gt;-->
+    <text-angular
+            ta-toolbar="[['h1','h2','h3','h4','h5','h6'],['bold','italics','underline'],['ul','ol','undo','redo','clear','justifyLeft','justifyCenter','justifyRight']]"
+            ng-model="html">
 
-    <!--<text-angular name="test" ta-text-editor-setup="textAreaSetup"></text-angular>&lt;!&ndash;2&ndash;&gt;-->
+    </text-angular>
 
-
-
-    <!--<div text-angular ng-model="htmlVariable" ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn btn-default" ta-toolbar-active-button-class="active"></div>-->
-    <text-angular ta-toolbar="[['h1','h2','h3','h4','h5','h6'],['bold','italics','underline'],['ul','ol','undo','redo','clear','justifyLeft','justifyCenter','justifyRight']]" ng-model="html"></text-angular>
 </div>
 
 <script>
     angular.module('textAngularTest',['textAngular'])
         .controller('myCtrl',function($scope,textAngularManager){
             console.log(textAngularManager);
-//
-//            $scope.htmlContent = '<p>hello world!</p>'      //1
-//
-//            $scope.textAreaSetup = function($element){
-//                $element.attr('ui-codemirror','');
-//            }
 
 
-            $scope.html = '<h1>asdasd</h1>';
+
+            $scope.html = 'asdasd';
             console.log($scope.html);
         })
 </script>

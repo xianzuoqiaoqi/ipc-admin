@@ -7,23 +7,18 @@ define(function (require) {
     require('myService');
     var loadCss = require('loadCss');
     loadCss.loadCss('res/css/AndroidInfo.css');
+    loadCss.loadCss('res/lib/textAngular/font-awesome/css/font-awesome.min.css');
+    loadCss.loadCss('res/lib/textAngular/textAngular.css');
 
     //引入UEditor插件
-    require('UEditor');
-    require('UEditorConfig');
-    window.ZeroClipboard = require('ZeroClipboard');//将ZeroClipboard定义为全局变量
-    console.log(UE);
+    var textAngularManager = require('textAngular');
+
+
     //控制器
-    app.controller('AndroidInfoController', function ($scope, myService) {
+    app.controller('AndroidInfoController', function ($scope, myService,textAngularManager) {
         //实例化编辑器并配置
-        var ue = UE.getEditor('currentContent', {
-            toolbars: [
-                ['inserttitle', 'paragraph', 'link', 'unlink', 'spechars', '|', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'fullscreen', '|', 'undo', 'redo', '|', 'drafts'],
-                ['bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|', 'selectall', 'cleardoc']
-            ],
-            autoHeightEnabled: true,
-            autoFloatEnabled: true
-        });
+
+
         //初始化页面显示内容
         var init = function(){
             //获取当前版本信息

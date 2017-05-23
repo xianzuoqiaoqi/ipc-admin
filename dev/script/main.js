@@ -28,8 +28,14 @@ window.loading = {
                 "UEditor": ["lib/UEditor/ueditor.all.min"],
                 "UEditorConfig": ["lib/UEditor/ueditor.config"],
                 "ZeroClipboard": "lib/UEditor/third-party/zeroclipboard/ZeroClipboard.min",//需要将这个模块定义为全局变量
+                //angularText
+                "textAngular":["lib/textAngular/textAngular"],
+                "textAngular-rangy":["lib/textAngular/textAngular-rangy.min"],
+                // "textAngular-sanitize":["lib/textAngular/textAngular-sanitize.min"],
+
                 "echarts": ["https://cdn.bootcss.com/echarts/3.4.0/echarts.min", "lib/echarts/echarts.min"],
                 "chinaMap": "lib/echarts/china",
+                //zui控制面板
                 "zui":"lib/zui/js/zui",
                 "dashBoard":"lib/zui/dashboard/zui.dashboard",
 
@@ -76,6 +82,17 @@ window.loading = {
                 },
                 "UEditor": {
                     deps: ["UEditorConfig"]
+                },
+                "textAngular":{
+                    deps:["angular-sanitize"],
+                    exports:"textAngular"
+                },
+                // "textAngular-sanitize":{
+                //     deps:["textAngular-rangy"],
+                //     exports:'ngSantize'
+                // },
+                "textAngular-rangy":{
+                    deps:["angular"]
                 },
                 "echarts": {
                     "exports": "echarts"
