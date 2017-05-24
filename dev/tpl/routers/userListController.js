@@ -93,6 +93,8 @@ define(function(require){
         $scope.goSearch = function(){
             $scope.pageInfo.startPage = 1;//页码初始化为1
             //开始查询
+            console.log($scope.pageInfo)
+            console.log($scope.pageInfo.startTime)
             showUserList(url,$scope.pageInfo);//发起请求，联测
         }
     })
