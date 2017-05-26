@@ -14,22 +14,22 @@ window.loading = {
         require.config({
             baseUrl: baseUrl,
             paths: {
-                "domReady": ["https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min", "lib/require/domReady.min"],
-                "angular": ["https://cdn.bootcss.com/angular.js/1.5.5/angular.min", "lib/angular/angular.min"],
-                "angularTouch": ["https://cdn.bootcss.com/angular.js/1.3.20/angular-touch.min", "lib/angular/angular-touch.min"],
-                "angularAnimate": ["https://cdn.bootcss.com/angular.js/1.3.20/angular-animate.min", "lib/angular/angular-animate.min"],
-                "uiBootstrap": ["https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min", "lib/angular/ui-bootstrap-tpls.min"],
-                "uiRouter": ["https://cdn.bootcss.com/angular-ui-router/0.4.2/angular-ui-router.min", "lib/angular/angular-ui-router.min"],
-                "angular-sanitize": ["https://cdn.bootcss.com/angular.js/1.5.5/angular-sanitize.min", "lib/angular/angular-sanitize.min"],
+                "domReady": ["lib/require/domReady.min","https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min"],
+                "angular": ["lib/angular/angular.min","https://cdn.bootcss.com/angular.js/1.5.5/angular.min"],
+                "angularTouch": ["lib/angular/angular-touch.min","https://cdn.bootcss.com/angular.js/1.3.20/angular-touch.min"],
+                "angularAnimate": ["lib/angular/angular-animate.min","https://cdn.bootcss.com/angular.js/1.3.20/angular-animate.min"],
+                "uiBootstrap": ["lib/angular/ui-bootstrap-tpls.min","https://cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min"],
+                "uiRouter": ["lib/angular/angular-ui-router.min","https://cdn.bootcss.com/angular-ui-router/0.4.2/angular-ui-router.min"],
+                "angular-sanitize": [ "lib/angular/angular-sanitize.min","https://cdn.bootcss.com/angular.js/1.5.5/angular-sanitize.min"],
                 "angular-nice-bar": "lib/angular/angular-nice-bar",
                 "asyncLoader": "lib/angular/angular-async-loader",
-                "jquery": ["https://cdn.bootcss.com/jquery/1.12.4/jquery.min", "lib/jquery/jquery.min"],
+                "jquery": [ "lib/jquery/jquery.min","https://cdn.bootcss.com/jquery/1.12.4/jquery.min"],
                 "layer": ["lib/layer/layer"],
 
                 //富文本框
                 "trix":['lib/angular-trix/trix'],
                 'angularTrix':['lib/angular-trix/angular-trix'],
-                "echarts": ["https://cdn.bootcss.com/echarts/3.4.0/echarts.min", "lib/echarts/echarts.min"],
+                "echarts": ["lib/echarts/echarts.min","https://cdn.bootcss.com/echarts/3.4.0/echarts.min"],
                 "chinaMap": "lib/echarts/china",
                 //zui控制面板
                 "zui":"lib/zui/js/zui",

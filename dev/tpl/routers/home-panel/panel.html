@@ -1,7 +1,7 @@
-<div class="panel">
+<div class="panel" data-url="res/tpl/routers/home-panel/2.html">
     <div class="panel-heading">
         <div class="panel-actions">
-            <a ui-sref="/project-all-undone-.html" class="panel-action drag-disabled panel-action-more"> <i class="icon icon-more"></i></a>
+            <a ui-sref="addUser.html" class="panel-action drag-disabled panel-action-more"> <i class="icon icon-more"></i></a>
             <div class="dropdown">
                 <a href="javascript:;" data-toggle="dropdown" class="panel-action"><i class="icon icon-ellipsis-v"></i></a>
                 <ul class="dropdown-menu pull-right">
@@ -11,9 +11,10 @@
                 </ul>
             </div>
         </div>
-        <span class="panel-title">RK3328</span>
+        <span class="panel-title">用户列表</span>
     </div>
     <div class="panel-body">
-        <p>点击顶部右侧的 <i class="icon icon-remove"></i> 按钮来移除该面板。</p>
+        <!--<p>可以将这个标签换成路由</p>-->
+        <p><div ui-view="userList">asd</div></p>
     </div>
 </div>

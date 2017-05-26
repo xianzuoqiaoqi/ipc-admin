@@ -3,14 +3,16 @@
  * 配置路由、注册路有事件
  * 依赖app、引入
  */
-define(["require", "app"], function (require, app) {
+define(["require", "app",'myService'], function (require, app,myService) {
     //路由事件
     app.run(function ($rootScope, $state, $log) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+            //启动路由加载动画
             $rootScope.loadRouter = layer.load(1, {shade: [0.5, '#000']});
         });
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             console.log('stateChangeSuccess');
+            //关闭路由家在动画
             layer.close($rootScope.loadRouter);
         });
     })
@@ -25,7 +27,14 @@ define(["require", "app"], function (require, app) {
                             "": {
                                 templateUrl: "res/tpl/routers/home.html",
                                 controllerUrl: "tpl/routers/homeController",
-                                controller: "homeController"
+                                controller: "homeController",
+                                resolve:{
+                                    data:function(myService){
+                                        return {
+                                            name:'zzq'
+                                        }
+                                    }
+                                }
                             },
                             "userList@home": {
                                 templateUrl: 'res/tpl/routers/userList.html',
