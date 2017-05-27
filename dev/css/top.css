@@ -1,5 +1,23 @@
-#top{height: 50px;background: rgb(55, 61, 65);}
-#top .ion-person{margin-right: 5px}
-#top .ion-arrow-down-b{margin-left: 8px;vertical-align: middle}
-#top .user-operation{line-height: 50px;color:#e3e3e3;cursor: pointer;}
-#top .user-operation:hover{color: #ffffff;}
+#top {
+    height: 50px;
+    background: rgb(55, 61, 65);
+}
+
+#top .ion-person {
+    margin-right: 5px
+}
+
+#top .ion-arrow-down-b {
+    margin-left: 8px;
+    vertical-align: middle
+}
+
+#top .user-operation {
+    line-height: 50px;
+    color: #e3e3e3;
+    cursor: pointer;
+}
+
+#top .user-operation:hover {
+    color: #ffffff;
+}
