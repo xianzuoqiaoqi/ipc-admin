@@ -29,6 +29,10 @@
         {
           "name": "设备型号信息",
           "subRoute": "devTypeList"
+        },
+        {
+          "name": "异常设备",
+          "subRoute": "unusualDevice"
         }
       ]
     },
@@ -38,19 +42,15 @@
       "subNames": [
         {
           "name": "控制面板",
-          "subRoute": "orderList"
+          "subRoute": "home"
         },
         {
           "name": "常用报表",
-          "subRoute": "orderList"
+          "subRoute": "commonReports"
         },
         {
           "name": "报表列表",
-          "subRoute": "orderList"
-        },
-        {
-          "name": "异常设备",
-          "subRoute": "orderList"
+          "subRoute": "reportList"
         }
       ]
     },

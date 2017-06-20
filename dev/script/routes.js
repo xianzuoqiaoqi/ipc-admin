@@ -3,7 +3,7 @@
  * 配置路由、注册路有事件
  * 依赖app、引入
  */
-define(["require", "app",'myService'], function (require, app,myService) {
+define(["require", "app", 'myService'], function (require, app, myService) {
     //路由事件
     app.run(function ($rootScope, $state, $log) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
@@ -21,64 +21,22 @@ define(["require", "app",'myService'], function (require, app,myService) {
             $urlRouterProvider.otherwise('/home'),
 
                 $stateProvider
-                    .state('home', {//首页，计划放控制面板
+                    .state('home', {//首页，控制面板
                         url: '/home',
                         views: {
                             "": {
                                 templateUrl: "res/tpl/routers/home.html",
                                 controllerUrl: "tpl/routers/homeController",
                                 controller: "homeController",
-                                resolve:{
-                                    data:function(myService){
+                                resolve: {
+                                    data: function (myService) {
                                         return {
-                                            name:'zzq'
+                                            name: 'zzq'
                                         }
                                     }
                                 }
-                            },
-                            "userList@home": {
-                                templateUrl: 'res/tpl/routers/userList.html',
-                                controllerUrl: 'tpl/routers/userListController',
-                                controller: 'userListController'
-                            },
-                            "addUser@home": {
-                                templateUrl: 'res/tpl/routers/addUser.html',
-                                controllerUrl: 'tpl/routers/addUserController',
-                                controller: 'addUserController'
-                            },
-                            "userInfo@home": {
-                                templateUrl: 'res/tpl/routers/userInfo.html',
-                                controllerUrl: 'tpl/routers/userInfoController',
-                                controller: 'userInfoController'
-                            },
-                            "ipcList@home": {
-                                templateUrl: 'res/tpl/routers/ipcList.html',
-                                controllerUrl: 'tpl/routers/ipcListController',
-                                controller: 'ipcListController'
-                            },
-                            "addIpc@home": {
-                                templateUrl: 'res/tpl/routers/addIpc.html',
-                                controllerUrl: 'tpl/routers/addIpcController',
-                                controller: 'addIpcController'
-                            },
-                            "ipcInfo@home": {
-                                templateUrl: 'res/tpl/routers/ipcInfo.html',
-                                controllerUrl: 'tpl/routers/ipcInfoController',
-                                controller: 'ipcInfoController'
-                            },
-                            "devTypeList@home": {
-                                templateUrl: 'res/tpl/routers/devTypeList.html',
-                                controllerUrl: 'tpl/routers/devTypeListController',
-                                controller: 'devTypeListController'
-                            },
-                            "firmwareInfo@home": {
-                                templateUrl: 'res/tpl/routers/firmwareInfo.html',
-                                controllerUrl: 'tpl/routers/firmwareInfoController',
-                                controller: 'firmwareInfoController'
                             }
                         }
-                        // controllerUrl:'tpl/userCollectController',
-                        // controller:'userCollectController'
                     })
                     .state('userList', {//用户列表
                         url: '/userlist',
@@ -141,18 +99,35 @@ define(["require", "app",'myService'], function (require, app,myService) {
                         controller: 'AndroidUpdateController'
                     })
                     .state('appInfo', {//一款app的详细信息
-                        url:'/appInfo/:appId',
-                        templateUrl:'res/tpl/routers/appInfo.html',
-                        controllerUrl:'tpl/routers/appInfoController',
-                        controller:'appInfoController'
+                        url: '/appInfo/:appId',
+                        templateUrl: 'res/tpl/routers/appInfo.html',
+                        controllerUrl: 'tpl/routers/appInfoController',
+                        controller: 'appInfoController'
                     })
                     .state('AndroidInfo', {//一款app的详细信息
-                        url:'/Android/:appId',
-                        templateUrl:'res/tpl/routers/AndroidInfo.html',
-                        controllerUrl:'tpl/routers/AndroidInfoController',
-                        controller:'AndroidInfoController'
+                        url: '/Android/:appId',
+                        templateUrl: 'res/tpl/routers/AndroidInfo.html',
+                        controllerUrl: 'tpl/routers/AndroidInfoController',
+                        controller: 'AndroidInfoController'
                     })
-
+                    .state('commonReports', {// 常用报表
+                        url: '/commonReports',
+                        templateUrl: 'res/tpl/routers/commonReports.html',
+                        controllerUrl: 'tpl/routers/commonReportsController',
+                        controller: 'commonReportsController'
+                    })
+                    .state('unusualDevice', {// 异常设备
+                        url: '/unusualDevice',
+                        templateUrl: 'res/tpl/routers/unusualDevice.html',
+                        controllerUrl: 'tpl/routers/unusualDeviceController',
+                        controller: 'unusualDeviceController'
+                    })
+                    .state('reportList', {// 报表列表
+                        url: '/reportList',
+                        templateUrl: 'res/tpl/routers/reportList.html',
+                        controllerUrl: 'tpl/routers/reportListController',
+                        controller: 'reportListController'
+                    })
         });
     //配置路由结束
 })
