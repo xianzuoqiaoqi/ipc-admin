@@ -30,11 +30,18 @@ define(["require", "app", 'myService'], function (require, app, myService) {
                                 controller: "homeController",
                                 resolve: {
                                     data: function (myService) {
-                                        return {
-                                            name: 'zzq'
-                                        }
+                                        return [
+                                            {id: "userList", title:'用户列表', order: '1', colWidth: '8', height:"300px" , "sref": "userList",},
+                                            {id: "userInfo", title:"用户列表",order: '2', colWidth: '2',  height:"400px", "sref": "userInfo",},
+                                            {id: "productList", title:"用户列表",order: '3', colWidth: '4',  height:"500px", "sref": "ipcList",}
+                                        ]
                                     }
                                 }
+                            },
+                            "userList@home": {  // 控制面板页的路由块
+                                templateUrl: "res/tpl/routers/addIpc.html",
+                                controllerUrl: "tpl/routers/addIpcController",
+                                controller:"addIpcController"
                             }
                         }
                     })
