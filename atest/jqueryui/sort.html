@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>可排序小部件（Sortable Widget）演示</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        #sortable {
+            width: 1000px;
+            border: 1px solid red
+        }
+        #sortable div{background: #00a2d4;width:100px;height:50px;border:1px solid #ffffaa;display: inline-block}
+        .sortable-placeholder{background: #ffffaa}
+    </style>
+</head>
+<body>
+
+<!--<div id="sortable2">-->
+<!--<div>ITEM!</div>-->
+<!--<div>ITEM!</div>-->
+<!--<div>ITEM!</div>-->
+<!--<div>ITEM!</div>-->
+<!--</div>-->
+<div class="box">
+    <div id="sortable">
+        <div>ITEM 1</div>
+        <div>ITEM 2</div>
+        <div>ITEM 3</div>
+        <div>ITEM 4</div>
+        <div>ITEM 5</div>
+    </div>
+</div>
+
+<script>
+    $("#sortable").sortable({
+//        axis: false,                                // 可移动的方向，默认值false
+//        connectWith: '#sortable2',                  // 两个可交互
+//        containment: 'body',                        // 定义拖拽边界
+//        cursor: 'move',                             // 定义光标
+//        cursorAt: {top: 50, left: 80},               // 光标位置
+//        delay: 0,                                   // 时间延迟
+//        distance: 0,                                // 距离延迟
+//        disabled: false,                            // 禁用、启用
+//        dropOnEmpty: false,                         // 是否允许拖拽到空的connectWith上
+//        forceHelperSize: true,                      // 如果为 true，强制助手（helper）有一个尺寸。
+//        forcePlaceholderSize: true,                 // 如果为 true，强制占位符（placeholder）有一个尺寸。
+//        grid: [0,0],                                // 对齐排序元素或助手（helper）到网格
+//        helper: 'clone',
+//        items: '> div',                             // 允许被拖拽的元素
+//        opacity: 0.5,                               // helper透明度
+        revert: true,                                // 动画到达位置
+        // 事件
+        deactivate: function(event, ui){
+            console.log(ui)
+        }
+    });
+
+    $('#sortable').sortable('toArray');
+    $("#sortable2").sortable({
+        axis: "y",
+        connectWith: '#sortable',
+        placeholder: '.sortable-placeholder',       //
+        revert: true,
+        scroll: false,
+        scrollSensitivity: 200,
+        scrollSpeed: 40,
+
+    });
+
+
+</script>
+
+</body>
+</html>

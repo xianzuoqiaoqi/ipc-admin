@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <style>
+        .parent{width:500px;height:500px;border:1px solid #cecece}
+        #resize{width:200px;height:100px;border:1px solid #cecece;background: #00b7ee;}
+        #sub{width:50px;height:50px;border:1px solid #cecece;background: #00b7ee;}
+        /*.resize-helper{border:1px solid #ffffaa}*/
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div id="resize">
+        <input type="text">
+        <div id="sub"></div>
+    </div>
+</div>
+<script>
+    $('#resize').resizable({
+        alsoResize: false,              // 一个或多个元素使用resize同步调整尺寸
+        animate: false,                 // 调整尺寸后动态变化
+        animateDuration: "fast",        // 动画持续时间
+        animateEasing: "easeOutBounce", // 动画运动曲线
+        aspectRatio: false,             // 长宽比限定
+        autoHide: true,                 // 隐藏手柄
+        cancel: '',                     // 防止从指定的元素上开始调整尺寸。
+        containment: '.parent',         // 约束在指定区域内调整尺寸，值为选择器
+        delay: 0,                       // 时间延迟缩放
+        distance: 0,                    // 距离延迟缩放
+        disabled: false,                // 禁用or启用
+        ghost: false,                   // 加透明效果，这个有bug
+        grid: [0,3],                    // 网格
+        handles: "e, s",                // 哪条边可以用来操作
+        helper: "",                     // 这个属性有bug
+        maxHeight: 1000,                // 最大尺寸
+        minHeight: 0,                   // 最小尺寸
+        // 事件
+        create: function(event, ui){
+//            console.log(event);
+//            console.log(ui);
+        },
+        resize: function(event,ui){     // 在调整尺寸期间当调整手柄拖拽时触发
+//            console.log(event);
+            console.log(ui.size);
+        },
+        start: function(event, ui){     // 尺寸修改开始时触发
+
+        },
+        stop: function(event, ui){      // 当调整尺寸操作停止时触发。
+            console.log(ui.size)
+        }
+    });
+
+//    $('#resize').resizable("destroy");  // 摧毁
+    $('#resize').resizable("disable");  // 禁用
+    $('#resize').resizable("enable");   // 启用
+    var option = $('#resize').resizable("option");   // 获取配置信息
+    var widget = $('#resize').resizable("widget");   // 获取节点信息
+
+</script>
+</body>
+</html>
