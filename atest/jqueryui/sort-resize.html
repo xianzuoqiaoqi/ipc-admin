@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>可排序小部件（Sortable Widget）演示</title>
+    <title>sort-resize</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -13,7 +13,7 @@
             border: 1px solid #ffffaa
         }
 
-        #sortable div {
+        #sortable .sort-item {
             width: 200px;
             height: 200px;
             background: #00a2d4;
@@ -55,17 +55,21 @@
         scrollSensitivity: 100,     // 距边缘多远时开始滚动
         tolerance: 'pointer',       // 鼠标指针移动到另一个项目时开始排序
 
-        update: function(event, ui){
+        update: function(){
+            console.log('排序结束')
             var sortedIDs = $( "#sortable" ).sortable( "toArray" );
             console.log(sortedIDs);         // ["sort-1", "sort-4", "sort-3", "sort-2", "sort-5"]
         }
     });
 
-    $('.btn').on("click", function () {
-        var sorted = $("#sortable").sortable("serialize", {key: "sort"});
-        console.log(sorted);            // sort=2&sort=1&sort=3&sort=4&sort=5
-        var sortedIDs = $( "#sortable" ).sortable( "toArray" );
-        console.log(sortedIDs);         // ["sort-1", "sort-4", "sort-3", "sort-2", "sort-5"]
+    $('.sort-item').resizable({
+        autoHide: true,
+        // 事件
+        stop: function (event, ui) {      // 当调整尺寸操作停止时触发。
+            console.log('尺寸调整结束')
+            console.log(ui.element[0].id);// 获取到是哪个调整了尺寸
+            console.log(ui.size)
+        }
     })
 </script>
 

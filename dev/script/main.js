@@ -31,11 +31,10 @@ window.loading = {
                 'angularTrix':['lib/angular-trix/angular-trix'],
                 "echarts": ["lib/echarts/echarts.min","https://cdn.bootcss.com/echarts/3.4.0/echarts.min"],
                 "chinaMap": "lib/echarts/china",
-                //zui控制面板
-                "zui":"lib/zui/js/zui",
-                "dashBoard":"lib/zui/dashboard/zui.dashboard",
 
-
+                // jquery-ui
+                "jQueryUI": "lib/jquery-ui/jquery-ui.min",
+                // 自定义功能组件
                 "loadCss": "script/loadCss",
                 'load': "script/load",
                 "routes": "script/routes",
@@ -79,11 +78,8 @@ window.loading = {
                 "angularTrix":{
                     deps:['angular','trix']
                 },
-                "zui":{
+                "jQueryUI":{
                     deps:['jquery']
-                },
-                "dashBoard":{
-                    deps:['zui']
                 }
             },
             deps: ['index']

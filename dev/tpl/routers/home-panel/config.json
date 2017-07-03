@@ -1,7 +1,0 @@
-{
-  "dashboards":[
-    {"name":"1.html","colWidth":"","height":"","url":"res/tpl/routers/home-panel/1.html"},
-    {"name":"2.html","colWidth":"","height":"","url":"res/tpl/routers/home-panel/2.html"},
-    {"name":"3.html","colWidth":"","height":"","url":"res/tpl/routers/home-panel/3.html"}
-  ]
-}
