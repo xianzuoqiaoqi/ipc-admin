@@ -1,0 +1,1 @@
+define(["app","loadCss","myService"],function(app,loadCss){app.controller("reportListController",function($scope){})});
