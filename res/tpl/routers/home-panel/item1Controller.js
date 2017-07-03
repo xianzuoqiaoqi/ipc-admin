@@ -1,0 +1,1 @@
+define(["app","loadCss","myService"],function(app,loadCss){loadCss.loadCss("res/css/item1.css"),app.controller("item1Controller",function($scope){})});
