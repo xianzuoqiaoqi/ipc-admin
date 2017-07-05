@@ -30,6 +30,10 @@ window.loading = {
                 "trix":['lib/angular-trix/trix'],
                 'angularTrix':['lib/angular-trix/angular-trix'],
                 "echarts": ["lib/echarts/echarts.min","https://cdn.bootcss.com/echarts/3.4.0/echarts.min"],
+                "bmap": "lib/echarts/bmap/bmap",
+                "BMapCoordSys": "lib/echarts/bmap/BMapCoordSys",
+                "BMapModel": "lib/echarts/bmap/BMapModel",
+                "BMapView": "lib/echarts/bmap/BMapView",
                 "chinaMap": "lib/echarts/china",
 
                 // jquery-ui
@@ -73,7 +77,10 @@ window.loading = {
                     deps: ["jquery"]
                 },
                 "echarts": {
-                    "exports": "echarts"
+                    exports: "echarts"
+                },
+                "bmap": {
+                    deps: ["BMapCoordSys","BMapModel","BMapView"]
                 },
                 "angularTrix":{
                     deps:['angular','trix']

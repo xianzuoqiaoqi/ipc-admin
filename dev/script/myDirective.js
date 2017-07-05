@@ -67,7 +67,6 @@ define(['require', 'app', 'loadCss', 'myService'], function (require, app, loadC
             return {
                 link: function (scope, element, attr) {
                     if (scope.$last == true) {
-                        console.log('ng-repeat执行完毕');
                         scope.$eval(attr.repeatFinish);
                     }
                 }

@@ -38,6 +38,11 @@ define(["require", "app", 'myService'], function (require, app, myService) {
                                 templateUrl: "res/tpl/routers/home-panel/item1.html",
                                 controllerUrl: "tpl/routers/home-panel/item1Controller",
                                 controller:"item1Controller"
+                            },
+                            "dev_area@home": {
+                                templateUrl: "res/tpl/routers/home-panel/dev_area.html",
+                                controllerUrl: "tpl/routers/home-panel/dev_areaController",
+                                controller:"dev_areaController"
                             }
                         }
                     })
