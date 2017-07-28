@@ -19,7 +19,6 @@ define(["require", "app", 'myService'], function (require, app, myService) {
     //配置路由
         .config(function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home'),
-
                 $stateProvider
                     .state('home', {//首页，控制面板
                         url: '/home',
@@ -32,17 +31,17 @@ define(["require", "app", 'myService'], function (require, app, myService) {
                             "userList@home": {  // 控制面板页的路由块
                                 templateUrl: "res/tpl/routers/addIpc.html",
                                 controllerUrl: "tpl/routers/addIpcController",
-                                controller:"addIpcController"
+                                controller: "addIpcController"
                             },
                             "item1@home": {
                                 templateUrl: "res/tpl/routers/home-panel/item1.html",
                                 controllerUrl: "tpl/routers/home-panel/item1Controller",
-                                controller:"item1Controller"
+                                controller: "item1Controller"
                             },
                             "dev_area@home": {
                                 templateUrl: "res/tpl/routers/home-panel/dev_area.html",
                                 controllerUrl: "tpl/routers/home-panel/dev_areaController",
-                                controller:"dev_areaController"
+                                controller: "dev_areaController"
                             }
                         }
                     })
@@ -87,6 +86,12 @@ define(["require", "app", 'myService'], function (require, app, myService) {
                         templateUrl: 'res/tpl/routers/devTypeList.html',
                         controllerUrl: 'tpl/routers/devTypeListController',
                         controller: 'devTypeListController'
+                    })
+                    .state('devConfig', {   // json格式化
+                        url: '/devConfig/:devTypeId',
+                        templateUrl: 'res/tpl/routers/devConfig.html',
+                        controllerUrl: 'tpl/routers/devConfigController',
+                        controller: 'devConfigController'
                     })
                     .state('firmwareInfo', {//设备固件版本信息
                         url: '/firmwareInfo/:devTypeId',

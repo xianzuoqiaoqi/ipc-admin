@@ -1,11 +1,9 @@
 /**
  * Created by zzq on 2017/7/5.
  */
-define(['app', 'loadCss', 'echarts', 'bmap', 'myService', 'chinaMap'], function (app, loadCss, echarts) {
+define(['app', 'loadCss', 'echarts', 'bmap', 'myService'], function (app, loadCss, echarts) {
 
     app.controller('dev_areaController', function ($scope) {
-        console.log(echarts);
-
         var myChart = echarts.init(document.getElementById('main'));
         var myData = [
             {name: '北京', value: [116, 39, 100]},
@@ -19,6 +17,10 @@ define(['app', 'loadCss', 'echarts', 'bmap', 'myService', 'chinaMap'], function 
                 text: '设备区域分布',
                 subtext: '',
                 left: 'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                enterable: true
             },
             bmap: {
                 center: [116, 39],
@@ -141,7 +143,18 @@ define(['app', 'loadCss', 'echarts', 'bmap', 'myService', 'chinaMap'], function 
                     name: 'IPC',
                     type: 'scatter',            // 散点图
                     coordinateSystem: 'bmap',   // 坐标系使用bmap
-                    data: myData
+                    data: myData,
+                    label: {
+                        normal: {
+                            formatter: '',
+                            position: 'right',
+                            show: false,
+                            textStyle:{color: 'red'}
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
                 }
             ]
         }

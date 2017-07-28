@@ -8,7 +8,6 @@ window.loading = {
         callback();
     },
     load: function () {
-        // var domain='https://865077695.github.io/admin/';
         var domain = '';
         var baseUrl = domain + 'res';
         require.config({
@@ -34,10 +33,11 @@ window.loading = {
                 "BMapCoordSys": "lib/echarts/bmap/BMapCoordSys",
                 "BMapModel": "lib/echarts/bmap/BMapModel",
                 "BMapView": "lib/echarts/bmap/BMapView",
-                "chinaMap": "lib/echarts/china",
 
                 // jquery-ui
                 "jQueryUI": "lib/jquery-ui/jquery-ui.min",
+                // json格式化组件
+                "jsonViewer": "lib/json-viewer/jquery.json-viewer",
                 // 自定义功能组件
                 "loadCss": "script/loadCss",
                 'load': "script/load",
@@ -79,13 +79,13 @@ window.loading = {
                 "echarts": {
                     exports: "echarts"
                 },
-                "bmap": {
-                    deps: ["BMapCoordSys","BMapModel","BMapView"]
-                },
                 "angularTrix":{
                     deps:['angular','trix']
                 },
                 "jQueryUI":{
+                    deps:['jquery']
+                },
+                "jsonViewer":{
                     deps:['jquery']
                 }
             },
