@@ -57,7 +57,7 @@ define(function (require) {
             {statusName: '未激活', statusId: '0'},
             {statusName: '激活', statusId: '1'},
             {statusName: '失效', statusId: '-1'},
-            {statusName: '其他', statusId: '2'}
+            {statusName: '默认', statusId: ''}
         ]
 
         //定义请求某页数据的函数，传入请求地址和请求参数
@@ -115,12 +115,13 @@ define(function (require) {
             showUserList(url, $scope.pageInfo)
         }
 
-        // 修改设备激活状态
-        $scope.changeStatus = function (index) {
-            console.log(index)
-            // 在此处提交新状态，成功后在回调函数内执行下面代码
-            $scope.userInfoList[index].accountStatus = $scope.userInfoList[index].accountStatus == 'active' ? 'inActive' : 'active'
-        }
-
     })
+        .filter('hideText', function () {
+            return function (val) {
+                var subStr1 = val.substr(0,3);
+                var subStr2 = val.substr(val.length-3);
+                var subStr = subStr1 + "..." + subStr2 ;
+                return subStr
+            };
+        })
 })

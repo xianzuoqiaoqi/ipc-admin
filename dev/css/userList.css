@@ -2,3 +2,5 @@
 #user-list .add-user,#user-list .search{margin-bottom: 20px;}
 #user-list .ion{font-size: 16px;color:#5cb85c;cursor: pointer}
 #user-list .isActive{padding:3px;background: #4cae4c;color:#fff;cursor: pointer;border-radius: 3px;}
+#user-list .user-login{display: inline-block;border-radius: 2px;padding:3px 5px;background: #e6e6e6;cursor: pointer}
+#user-list .user-login:not(:first-child){margin-left: 20px;}
