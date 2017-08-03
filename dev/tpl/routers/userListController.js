@@ -10,7 +10,7 @@ define(function (require) {
 
     app.controller('userListController', function ($scope, myService, storage) {
         console.log(storage)
-        // storage.set('pageSize', 10)
+        // storage.set('userListPageSize', 10)
         //日期插件配置及操作
         //初始化查询条件
         $scope.dateOption = {
@@ -80,7 +80,7 @@ define(function (require) {
             startTime: '',
             endTime: '',
             startPage: 1,    //索要的页码
-            pageSize: storage.get('pageSize'),     //初始化从localstorage中获取每页条数。
+            pageSize: storage.get('userListPageSize'),     //初始化从localstorage中获取每页条数。
             devStatus: ''    // 设备状态
         };
 
@@ -110,7 +110,7 @@ define(function (require) {
         // 自定义每页条数
         $scope.pageSizeChange = function () {
             $scope.pageInfo.pageSize = $scope.pageSize; // 存入pageInfo
-            storage.set('pageSize', $scope.pageSize);   // 存入localstorage
+            storage.set('userListPageSize', $scope.pageSize);   // 存入localstorage
             // 携带新参数重新发起请求
             showUserList(url, $scope.pageInfo)
         }
