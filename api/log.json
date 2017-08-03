@@ -1,0 +1,20 @@
+userInfo = {
+  "accountId": "@integer(1, 30)",
+  "userName": "@email",
+  "accountStatus": "active",
+  "updateDate": "@date",
+  "createDate": "@date",
+  "onlineStatus": "1",
+  "userLoginInfo|1-5": [{
+    "loginName": "@email",
+    "loginType": "email",
+    "loginNameCreateDate": "@date",
+    "loginNameUpdateDate": "@date"
+  }],
+  "loginStatus": "1",
+  "loginDate": "@date",
+  "loginToken": "@string",
+  "userMqttClientId": "@string",
+  "appType": "ddd",
+  "acceptAlarm|0-1": "1"
+}
