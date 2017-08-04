@@ -3,7 +3,6 @@
 * */
 
 // 1.设备列表 dev_list
-查询框（模糊匹配型号ID、设备型号、设备序列号、P2P ID、当前固件版本、属主Email、属主手机号、备注(暂不实现)）、设备状态[未分配/未激活/生效/失效/不限]、在线[是/否/不限]、出厂时间[日期范围]、云存储 [不限/未开通/待付款/套餐列表](暂不实现)、直播[是/否/不限](暂不实现)、每页数目[默认15，客户端保存]
 // request
 +{
     "query": "@string",         // 模糊查询(null/型号id/设备型号/设备序列号/P2PID/当前固件版本/属主手机号/属主email)    // TODO 备注查询暂不实现
@@ -83,7 +82,8 @@
             "role": number,             // 角色
             "Email": "@email",          // 邮箱
             "mobile": "@mobile"         // 手机
-        }
+        },
+        ...
     ],
     "dev_status": "@string",            // 设备状态 枚举(null/active/inactive/valid/invalid) varchar(16)
     "reg_date": "@date",                // 出厂日期 bigint
