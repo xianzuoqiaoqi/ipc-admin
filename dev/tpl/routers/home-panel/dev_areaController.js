@@ -203,6 +203,9 @@ define(['app', 'loadCss', 'echarts', 'bmap', 'myService'], function(app, loadCss
                 type: 'scatter', // 散点图
                 coordinateSystem: 'bmap', // 坐标系使用bmap
                 data: myData,
+                // symbol: "image//img/lamp.png",
+                symbol: 'image://./res/img/lamp.png',
+                symbolSize:20,
                 label: {
                     normal: {
                         formatter: '',
