@@ -6,3 +6,5 @@ node_modules/
 aresource/
 # 忽略easy-mock数据接口地址文件
 easy-mock.txt
+# 忽略liveplayer
+liveplayer/
